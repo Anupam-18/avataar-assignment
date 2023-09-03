@@ -12,7 +12,7 @@ function FeaturedProducts() {
       content: (
         <Card
           imageLink="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a"
-          imageDescp="Modern kitchen utensils"
+          imageDescp="Modern Beautiful Images"
         />
       ),
     },
@@ -21,7 +21,7 @@ function FeaturedProducts() {
       content: (
         <Card
           imageLink="https://images.unsplash.com/photo-1562813733-b31f71025d54"
-          imageDescp="Modern kitchen utensils"
+          imageDescp="Modern Beautiful Images"
         />
       ),
     },
@@ -48,7 +48,7 @@ function FeaturedProducts() {
       content: (
         <Card
           imageLink="https://images.unsplash.com/photo-1505238680356-667803448bb6"
-          imageDescp="Modern kitchen utensils"
+          imageDescp="Modern Beautiful Images"
         />
       ),
     },
@@ -57,7 +57,7 @@ function FeaturedProducts() {
       content: (
         <Card
           imageLink="https://images.unsplash.com/photo-1693018365570-0e6c844724d4"
-          imageDescp="Modern kitchen utensils"
+          imageDescp="Modern Beautiful Images"
         />
       ),
     },
