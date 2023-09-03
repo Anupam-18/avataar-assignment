@@ -11,7 +11,16 @@ function FeaturedProducts() {
       key: uuidv4(),
       content: (
         <Card
-          imageLink="https://updates.theme-fusion.com/wp-content/uploads/2017/12/convertplus_thumbnail.jpg"
+          imageLink="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a"
+          imageDescp="Modern kitchen utensils"
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imageLink="https://images.unsplash.com/photo-1562813733-b31f71025d54"
           imageDescp="Modern kitchen utensils"
         />
       ),
@@ -21,7 +30,7 @@ function FeaturedProducts() {
       content: (
         <Card
           imageLink="https://updates.theme-fusion.com/wp-content/uploads/2017/12/acf_pro.png"
-          imageDescp="Modern kitchen utensils"
+          imageDescp="Modern Beautiful Images"
         />
       ),
     },
@@ -29,16 +38,7 @@ function FeaturedProducts() {
       key: uuidv4(),
       content: (
         <Card
-          imageLink="https://updates.theme-fusion.com/wp-content/uploads/2017/12/layer_slider_plugin_thumb.png"
-          imageDescp="Modern kitchen utensils"
-        />
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card
-          imageLink="https://updates.theme-fusion.com/wp-content/uploads/2016/08/slider_revolution-1.png"
+          imageLink="https://images.unsplash.com/photo-1521185496955-15097b20c5fe"
           imageDescp="Modern kitchen utensils"
         />
       ),
@@ -48,7 +48,34 @@ function FeaturedProducts() {
       content: (
         <Card
           imageLink="https://updates.theme-fusion.com/wp-content/uploads/2019/01/pwa_880_660.jpg"
+          imageDescp="Modern Beautiful Images"
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imageLink="https://images.unsplash.com/photo-1505238680356-667803448bb6"
           imageDescp="Modern kitchen utensils"
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imageLink="https://images.unsplash.com/photo-1693018365570-0e6c844724d4"
+          imageDescp="Modern kitchen utensils"
+        />
+      ),
+    },
+    {
+      key: uuidv4(),
+      content: (
+        <Card
+          imageLink="https://updates.theme-fusion.com/wp-content/uploads/2017/12/convertplus_thumbnail.jpg"
+          imageDescp="Modern Beautiful Images"
         />
       ),
     },

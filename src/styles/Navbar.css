@@ -127,3 +127,8 @@
 .searchIcon {
   color: white;
 }
+@media screen and (max-width: 786px) {
+  .searchBox {
+    display: none;
+  }
+}
