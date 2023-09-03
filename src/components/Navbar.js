@@ -42,7 +42,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [items]);
 
   return (
     <div className="navbarContainer">
