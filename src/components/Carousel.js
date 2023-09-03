@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { config } from "react-spring";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import "../styles/Carousel.css";
 
 function Carroussel(props) {
   const table = props.cards.map((element, index) => {

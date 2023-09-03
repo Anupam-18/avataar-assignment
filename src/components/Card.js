@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSpring, animated } from "react-spring";
-import "./Card.css";
+import "../styles/Card.css";
 
 function Card({ imageLink, imageDescp }) {
   const [show, setShown] = useState(false);

@@ -3,7 +3,7 @@ import React from "react";
 import { v4 as uuidv4 } from "uuid";
 import Card from "./Card";
 import Carroussel from "./Carousel";
-import "./FeaturedProducts.css";
+import "../styles/FeaturedProducts.css";
 
 function FeaturedProducts() {
   let cards = [

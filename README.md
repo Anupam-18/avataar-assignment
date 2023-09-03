@@ -1,4 +1,4 @@
-# Dynamic Navbar + Infinite 3d carousel using React
+# Dynamic Navbar + Infinite 3d carousel web app
 
 ## Table of contents
 
