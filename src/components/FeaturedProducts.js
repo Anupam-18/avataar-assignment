@@ -39,7 +39,7 @@ function FeaturedProducts() {
       content: (
         <Card
           imageLink="https://images.unsplash.com/photo-1521185496955-15097b20c5fe"
-          imageDescp="Modern kitchen utensils"
+          imageDescp="Modern Beautiful Images"
         />
       ),
     },
