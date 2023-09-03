@@ -11,10 +11,10 @@ const Navbar = () => {
   const items = navItems;
   const [visibleItems, setVisibleItems] = useState([]);
   const [hiddenItems, setHiddenItems] = useState([]);
-  const [dropdownState, setDropdownState] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleDropdownClick = () => {
-    setDropdownState(!dropdownState);
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   const debounce = (fn, delay) => {
@@ -64,11 +64,11 @@ const Navbar = () => {
               <Typography
                 onClick={handleDropdownClick}
                 className={`navitem showMore ${
-                  dropdownState ? "selected" : ""
+                  isDropdownOpen ? "selected" : ""
                 }`}
               >
                 MORE
-                {!dropdownState ? (
+                {!isDropdownOpen ? (
                   <KeyboardArrowDownIcon />
                 ) : (
                   <KeyboardArrowUpIcon />
@@ -76,7 +76,7 @@ const Navbar = () => {
               </Typography>
               <div
                 className={`dropdownItemsParent ${
-                  dropdownState ? "isVisible" : "isHidden"
+                  isDropdownOpen ? "isVisible" : "isHidden"
                 }`}
               >
                 {hiddenItems.map((item, index) => (
