@@ -3,9 +3,6 @@
   height: calc(100vh - 88px);
   background: #fff;
   padding: 133px 55px 44px 44px;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
 }
 .featuredProductsHeading {
   color: #231f20;
@@ -23,4 +20,14 @@
   font-style: normal;
   font-weight: 400 !important;
   line-height: 32px !important;
+}
+@media screen and (max-width: 786px) {
+  .featuredProductsHeading {
+    font-size: 32px !important;
+  }
+  .featuredProductsSubHheading {
+    font-size: 16px !important;
+    line-height: 18px !important;
+    margin-top: unset !important;
+  }
 }

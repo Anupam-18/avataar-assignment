@@ -47,15 +47,6 @@ function FeaturedProducts() {
       key: uuidv4(),
       content: (
         <Card
-          imageLink="https://updates.theme-fusion.com/wp-content/uploads/2019/01/pwa_880_660.jpg"
-          imageDescp="Modern Beautiful Images"
-        />
-      ),
-    },
-    {
-      key: uuidv4(),
-      content: (
-        <Card
           imageLink="https://images.unsplash.com/photo-1505238680356-667803448bb6"
           imageDescp="Modern kitchen utensils"
         />
