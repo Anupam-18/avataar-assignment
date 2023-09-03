@@ -32,7 +32,9 @@ function Carroussel(props) {
       <div className="navigation">
         <ArrowBackIcon
           onClick={() => {
-            setGoToSlide((prev) => prev - 1);
+            let index =
+              goToSlide === 0 ? props.cards.length - 1 : goToSlide - 1;
+            setGoToSlide(index);
           }}
           className="navigationIcon"
         />
@@ -40,11 +42,7 @@ function Carroussel(props) {
           return (
             <button
               key={item.key}
-              className={
-                goToSlide === index
-                  ? "indicator"
-                  : "indicator indicator-inactive"
-              }
+              className={`indicator ${goToSlide === index ? "active" : ""}`}
               onClick={() => {
                 setGoToSlide(index);
               }}
@@ -53,7 +51,7 @@ function Carroussel(props) {
         })}
         <ArrowForwardIcon
           onClick={() => {
-            setGoToSlide((prev) => prev + 1);
+            setGoToSlide((prev) => (prev + 1) % props.cards.length);
           }}
           className="navigationIcon"
         />

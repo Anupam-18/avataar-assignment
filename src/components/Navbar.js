@@ -31,7 +31,7 @@ const Navbar = () => {
     const handleResize = () => {
       const navbar = document.getElementById("navbar");
       const navbarWidth = navbar.offsetWidth;
-      const itemWidth = 100;
+      const itemWidth = 90;
       const maxVisibleItems = Math.floor(navbarWidth / itemWidth);
       setVisibleItems(items.slice(0, maxVisibleItems));
       setHiddenItems(items.slice(maxVisibleItems));

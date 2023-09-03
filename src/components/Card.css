@@ -39,17 +39,20 @@
   align-items: center;
 }
 .indicator {
-  background-color: #83cef9;
-  height: 0.5rem;
-  width: 0.5rem;
+  height: 12px;
+  width: 12px;
   border-radius: 100%;
   border: none;
   outline: none;
   margin: 0 0.2rem;
   cursor: pointer;
-}
-.indicator-inactive {
   background-color: #d3d2d2;
+}
+.active {
+  background-color: #83cef9;
+  width: 32px;
+  height: 12px;
+  border-radius: 8px;
 }
 .navigationIcon {
   width: 24px;
