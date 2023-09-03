@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { navItems } from "../utils/NavitemsList";
 import NavbarLogo from "../assets/Intersect.png";
 import SearchIcon from "@mui/icons-material/Search";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import ".././App.css";
-import { Button, InputAdornment, TextField, Typography } from "@mui/material";
-const ResponsiveNavbar = ({ items }) => {
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import { InputAdornment, TextField, Typography } from "@mui/material";
+import "../styles/Navbar.css";
+
+const Navbar = () => {
+  const items = navItems;
   const [visibleItems, setVisibleItems] = useState([]);
   const [hiddenItems, setHiddenItems] = useState([]);
   const [dropdownState, setDropdownState] = useState(false);
@@ -27,11 +31,10 @@ const ResponsiveNavbar = ({ items }) => {
     const handleResize = () => {
       const navbar = document.getElementById("navbar");
       const navbarWidth = navbar.offsetWidth;
-      const itemWidth = 80;
+      const itemWidth = 100;
       const maxVisibleItems = Math.floor(navbarWidth / itemWidth);
       setVisibleItems(items.slice(0, maxVisibleItems));
       setHiddenItems(items.slice(maxVisibleItems));
-      console.log("====> called");
     };
     handleResize();
     const betterFunction = debounce(handleResize, 300);
@@ -57,26 +60,30 @@ const ResponsiveNavbar = ({ items }) => {
         </ul>
         {hiddenItems.length > 0 && (
           <>
-            <div className="container">
-              <div className="dropdown">
-                <Typography
-                  onClick={handleDropdownClick}
-                  className="navitem iconholder"
-                >
-                  MORE
+            <div className="hiddenItemsContainer">
+              <Typography
+                onClick={handleDropdownClick}
+                className={`navitem showMore ${
+                  dropdownState ? "selected" : ""
+                }`}
+              >
+                MORE
+                {!dropdownState ? (
                   <KeyboardArrowDownIcon />
-                </Typography>
-                <div
-                  className={`dropdown-items ${
-                    dropdownState ? "isVisible" : "isHidden"
-                  }`}
-                >
-                  {hiddenItems.map((item, index) => (
-                    <div className="dropdown-item" key={index}>
-                      <div className="dropdown__link">{item}</div>
-                    </div>
-                  ))}
-                </div>
+                ) : (
+                  <KeyboardArrowUpIcon />
+                )}
+              </Typography>
+              <div
+                className={`dropdownItemsParent ${
+                  dropdownState ? "isVisible" : "isHidden"
+                }`}
+              >
+                {hiddenItems.map((item, index) => (
+                  <div className="dropdownItem" key={index}>
+                    {item}
+                  </div>
+                ))}
               </div>
             </div>
           </>
@@ -86,11 +93,11 @@ const ResponsiveNavbar = ({ items }) => {
         id="input-with-icon-textfield"
         variant="standard"
         placeholder="Search something"
-        className="seacrhBox"
+        className="searchBox"
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
-              <SearchIcon />
+              <SearchIcon className="searchIcon" />
             </InputAdornment>
           ),
         }}
@@ -99,4 +106,4 @@ const ResponsiveNavbar = ({ items }) => {
   );
 };
 
-export default ResponsiveNavbar;
+export default Navbar;
